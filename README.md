@@ -1,16 +1,19 @@
-### Hi there 👋
+# Hi there 👋
 
-<!--
-**ivanhjc/ivanhjc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to personal site! I'm Ivan. 
 
-Here are some ideas to get you started:
+🔭 I’m currently working on several projects for a small startup company in the new energy area.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🌱 I’m currently learning any thing that intrigues me.
+
+👯 I’m looking to collaborate on any project that could make the world a little better.
+
+🤔 I’m looking for an opportunity eligible for my skills and interest.
+
+💬 Ask me for a resume.
+
+📫 How to reach me: mailto: email@ivanhjc.net
+
+😄 Pronouns: He/him
+
+⚡ Fun fact:
