@@ -1,3 +1,6 @@
+.gitignore
 .jekyll-cache
 _site
 Gemfile.lock
+.idea
+*~

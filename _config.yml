@@ -1,0 +1,14 @@
+name: Ivan Huang
+avatar: https://res.cloudinary.com/ivanhjc/image/upload/v1602736588/lADPBG1Q53OmyVjNCmzNCmw_2668_2668_rxbufo.jpg
+title: Senior Software Engineer
+links:
+  - label: Website
+    icon: fa-book
+    url: https://notes.ivanhjc.net
+  - label: Github
+    icon: fa-github
+    url: https://github.com/ivanhjc
+  - label: Twitter
+    icon: fa-twitter
+    url: https://twitter.com/ivanhjc_
+
