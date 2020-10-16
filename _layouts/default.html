@@ -11,9 +11,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	  <script src="assets/js/jquery-3.4.1.js"></script>
-	<script src="assets/js/main.js"></script>
-
   </head>
   <body class="is-preload">
 
@@ -33,7 +30,7 @@
       {% if site.links %}
         {% for link in site.links %}
           {% if link.label and link.url %}
-            <li><a href="{{link.url}}" class="icon brands {{link.icon | default: 'fa-link'}}">{{link.label}}</a></li>
+            <li><a href="{{link.url}}" class="icon {{link.icon}}">{{link.label}}</a></li>
           {% endif %}
         {% endfor %}
       {% endif %}
