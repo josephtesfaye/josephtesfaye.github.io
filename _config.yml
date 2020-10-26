@@ -8,6 +8,9 @@ links:
   - label: Github
     icon: brands fa-github
     url: https://github.com/ivanhjc
+  - label: StackExchange
+    icon: brands fa-stack-exchange
+    url: https://stackexchange.com/users/4773526/ivan-huang    
   - label: Twitter
     icon: brands fa-twitter
     url: https://twitter.com/ivanhjc_
