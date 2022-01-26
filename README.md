@@ -1,1 +1,0 @@
-Theme restructed from [HTML5 UP's Identity](https://html5up.net/identity)
