@@ -1,67 +1,17 @@
-* Settings
-** Windows
-- OS version: Windows 10
-- Ruby environment versions:
-  #+begin_src bash
-    $ ruby -v   # ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
-    $ gem -v    # 3.1.4
-    $ bundle -v # Bundler version 2.1.4
-    $ jekyll -v # jekyll 4.1.1
-  #+end_src
+* Running offline
+To run the website offline, first you need to [[p:notes/web.org::#install-jekyll][install Jekyll]]. Make sure the versions of the following packages are the same:
 
-* Run
-First see how to [[file:d:/projects/notes/web.org::#install-jekyll][install Jekyll]].
+For Windows 10:
+#+begin_src bash
+  ruby -v   # ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x64-mingw32]
+  gem -v    # 3.1.4
+  bundle -v # Bundler version 2.1.4
+  jekyll -v # jekyll 4.1.1
+#+end_src
 
-Then to serve the website locally, run:
+Then you can run the website on your machine using:
+
 #+begin_src bash
   bundle install
   bundle exec jekyll serve
 #+end_src
-
-** Error log
-*** Packages missing when running with different versions of Ruby
-When running ~bundle exec jekyll serve~ on a device with the following environment settings:
-
-#+begin_src bash
-  $ ruby -v   # ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x64-mingw-ucrt]
-  $ gem -v    # 3.3.3
-  $ bundle -v # Bundler version 2.3.3
-  $ jekyll -v # jekyll 4.2.1
-#+end_src
-
-The command produced the following error:
-
-#+begin_example
-D:\projects\ivanhjc.github.io>bundle exec jekyll serve
-Configuration file: D:/projects/ivanhjc.github.io/_config.yml
-            Source: D:/projects/ivanhjc.github.io
-       Destination: D:/projects/ivanhjc.github.io/_site
- Incremental build: disabled. Enable with --incremental
-      Generating...
-                    done in 1.807 seconds.
-  Please add the following to your Gemfile to avoid polling for changes:
-    gem 'wdm', '>= 0.1.0' if Gem.win_platform?
- Auto-regeneration: enabled for 'D:/projects/ivanhjc.github.io'
-C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in `<top (required)>'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `require_relative'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:184:in `setup'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:102:in `process'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `block in start'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `each'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:93:in `start'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve.rb:75:in `block (2 levels) in init_with_program'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `block in execute'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `each'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/mercenary-0.3.6/lib/mercenary/command.rb:220:in `execute'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/mercenary-0.3.6/lib/mercenary/program.rb:42:in `go'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/mercenary-0.3.6/lib/mercenary.rb:19:in `program'
-        from C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/jekyll-3.9.0/exe/jekyll:15:in `<top (required)>'
-        from C:/Ruby31-x64/bin/jekyll:25:in `load'
-        from C:/Ruby31-x64/bin/jekyll:25:in `<main>'
-#+end_example
-
-From the error you may guess it's because some dependencies related to =webrick= are missing. Indeed, you can add the gem to your dependencies by using ~bundle add webrick~ and then serve it again. Or add =gem "webrick"= to the Gemfile and then run ~bundle install~ again. See [[https://stackoverflow.com/q/65989040/4357087][bundle exec jekyll serve: cannot load such file]], [[orgit-rev:d:/projects/jekyll/::bcaf878b65d6349da9e53ad9243796e72797c0db][Jekyll (rev bcaf878b6)]].
-
-* Develop
-Theme restructed from [HTML5 UP's Identity](https://html5up.net/identity)
