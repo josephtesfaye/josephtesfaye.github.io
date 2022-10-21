@@ -1,16 +1,16 @@
-name: Ivan Huang
-avatar: https://gravatar.loli.net/avatar/5cad7e9fe5a1ff8e50363b833e1c5b84?s=400
+name: Joseph Tesfaye
+avatar: https://gravatar.loli.net/avatar/167bb330a4095f88f26e379608c94328?s=400
 title: Software Engineer
 links:
   - label: About
     icon: fa-user-circle
-    url: https://notes.ivanhjc.net/about
+    url: https://josephtesfaye.com/blog/about
   - label: Github
     icon: brands fa-github
-    url: https://github.com/ivanhjc
-  - label: StackExchange
-    icon: brands fa-stack-exchange
-    url: https://stackexchange.com/users/4773526/ivan-huang    
+    url: https://github.com/josephtesfaye
+  - label: Stack Overflow
+    icon: brands fa-stack-overflow
+    url: https://stackoverflow.com/users/4357087
   - label: Twitter
     icon: brands fa-twitter
-    url: https://twitter.com/ivanhjc_
+    url: https://twitter.com/josephtesfaye_
