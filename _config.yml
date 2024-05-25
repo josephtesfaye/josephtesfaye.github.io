@@ -1,16 +1,22 @@
-name: Joseph Tesfaye
-avatar: https://gravatar.loli.net/avatar/167bb330a4095f88f26e379608c94328?s=360
+name: Joseph Kou
+avatar: https://gravatar.com/avatar/e235e747123422d4c7539c152d404bd6ff0680cd7fb5b4a86f2c7bb1ee786900?size=512
 title: Software Engineer
 links:
   - label: About
     icon: fa-user-circle
     url: https://josephtesfaye.com/josephs-blog/about
+  - label: Instagram
+    icon: brands fa-instagram
+    url: https://www.instagram.com/josephtesfayee
+  - label: Twitter
+    icon: brands fa-twitter
+    url: https://twitter.com/josephtesfayee
+  - label: Mastodon
+    icon: brands fa-mastodon
+    url: https://noc.social/@josephtesfaye
   - label: Github
     icon: brands fa-github
     url: https://github.com/josephtesfaye
   - label: Stack Overflow
     icon: brands fa-stack-overflow
     url: https://stackoverflow.com/users/4357087
-  - label: Mastodon
-    icon: brands fa-mastodon
-    url: https://noc.social/@josephtesfaye
