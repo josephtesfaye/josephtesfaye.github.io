@@ -5,65 +5,93 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
   -->
 <html>
-  <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143784270-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 
-	  gtag('config', 'UA-143784270-1');
-	</script>
-	<title>{{site.name}}</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<script data-ad-client="ca-pub-2501730911245634" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
-  <body class="is-preload">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143784270-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    gtag('config', 'UA-143784270-1');
+  </script>
+  <title>{{site.name}}</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <script data-ad-client="ca-pub-2501730911245634" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
 
-	  <!-- Main -->
-	  <section id="main">
-		<header>
-		  <span class="avatar"><img src="{{site.avatar}}" alt="" height="144px" width="144px"/></span>
-		  <h1>{{site.name}}</h1>
-		  <p>{{site.title}}</p>
-		</header>
-		
-		<footer>
-		  <ul class="icons">
-      {% if site.links %}
-        {% for link in site.links %}
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <section id="main">
+      <header>
+        <span class="avatar"><img src="{{site.avatar}}" alt="" height="144px" width="144px" /></span>
+        <h1>{{site.name}}</h1>
+        <p>{{site.title}}</p>
+      </header>
+
+      <footer>
+        <ul class="icons">
+          {% if site.links %}
+          {% for link in site.links %}
           {% if link.label and link.url %}
-            <li><a href="{{link.url}}" class="icon {{link.icon}}">{{link.label}}</a></li>
+          <li><a href="{{link.url}}" class="icon {{link.icon}}">{{link.label}}</a></li>
           {% endif %}
-        {% endfor %}
-      {% endif %}
-		  </ul>
-		</footer>
-	  </section>
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </footer>
+    </section>
 
-	  <!-- Footer -->
-	  <footer id="footer">
-		<ul class="copyright">
-		  <!-- <li>&copy; {{site.name}}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-		</ul>
-	  </footer>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="copyright">
+        <!-- <li>&copy; {{site.name}}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+      </ul>
+    </footer>
 
-	</div>
+  </div>
 
-	<!-- Scripts -->
-	<script>
-	  if ('addEventListener' in window) {
-		  window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-		  document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-	  }
-	</script>
+  <!-- Scripts -->
+  <script>
+    if ('addEventListener' in window) {
+      window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+      document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+    }
+  </script>
 
-  </body>
+  <!-- Load background image -->
+  <script>
+    window.addEventListener('load', function () {
+      const bgImage = new Image();
+      const imageUrl = "https://picsum.photos/1080/720";
+
+      bgImage.onload = function () {
+        // Once the image is fully downloaded in the background...
+        document.body.style.backgroundImage = `
+                url("/assets/images/overlay.png"),
+                linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)),
+                url("${imageUrl}")
+                 `;
+        // Ensure the sizes and positions are maintained
+        document.body.style.backgroundSize = "100px 100px, cover, cover";
+        document.body.style.backgroundAttachment = "fixed, fixed, fixed";
+      };
+
+      bgImage.src = imageUrl;
+    });
+  </script>
+
+</body>
+
 </html>
